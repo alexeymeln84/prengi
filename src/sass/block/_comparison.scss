@@ -1,0 +1,96 @@
+.comparison {
+    width: 100%;
+    min-height: 500px;
+    background-color: #ffffff;
+    padding: 80px 0;
+    &__grid-container {
+        display: grid;
+        grid-template: repeat(4, minmax(30px, auto)) / repeat(3, 360px);
+        grid-auto-rows: minmax(1px, auto);
+        column-gap: 30px;
+        row-gap: 35px;
+    }
+    &__arrow {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__left {
+        position: relative;
+        width: 85px;
+        height: 72px;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            transform: rotate(25deg);
+            top: 25px;
+            right: -4px;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            transform: rotate(25deg);
+            bottom: 25px;
+            right: -4px;
+        }
+    }
+    &__right {
+        position: relative;
+        width: 85px;
+        height: 72px;
+        &:before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            transform: rotate(-25deg);
+            top: 25px;
+            left: -4px;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            transform: rotate(-25deg);
+            bottom: 25px;
+            left: -4px;
+        }
+    }
+    &__title {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    &__block {
+        position: relative;
+        &_gr {
+            grid-row: 4;
+        }
+    }
+    &__text {
+        width: 100%;
+        padding: 0 30px;
+        position: absolute;
+        bottom: 35px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 300;
+        color: $title_color;
+        left: 50%;
+        transform: translateX(-50%);
+        &_bold {
+            font-weight: 700;
+        }
+    }
+}

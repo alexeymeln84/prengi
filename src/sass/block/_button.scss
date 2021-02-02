@@ -1,0 +1,19 @@
+.button {
+    width: 240px;
+    height: 60px;
+    background-color: $main_color;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    &:hover {
+        box-shadow: 3px 3px 15px #000000;
+    }
+}

@@ -1,0 +1,77 @@
+.promo {
+    width: 100vw;
+    min-height: 700px;
+    background: url(../img/main_bg.jpg) center ( center / cover) no-repeat;
+    padding-top: 40px;
+    &__grid-container {
+        display: grid;
+        grid-template: 65px 570px / 530px 535px;
+        grid-auto-rows: 65px;
+        column-gap: 75px;
+        row-gap: 30px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(30px, auto));
+        grid-template-rows: 20px;
+        column-gap: 40px;
+        text-align: center;
+        align-content: center;
+        justify-self: end;
+    }
+    &__link {
+        font-size: 13px;
+        line-height: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &__text {
+        display: grid;
+        grid-template: 90px 55px 60px / 1fr;
+        grid-auto-rows: minmax(1px, auto);
+        row-gap: 30px;
+        margin-top: 105px;
+    }
+    &__picture {
+        position: relative;
+    }
+    &__main-border {
+        position: absolute;
+        right: 0;
+        z-index: 10;
+        bottom: 0;
+    }
+    &__main-screen {
+        position: absolute;
+        right: 22px;
+        bottom: 0;
+        z-index: 10;
+    }
+    &__second-border {
+        position: absolute;
+        bottom: 0;
+        right: 150px;
+    }
+    &__second-screen {
+        position: absolute;
+        bottom: 0;
+        right: 170px;
+    }
+}

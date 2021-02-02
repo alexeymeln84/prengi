@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    min-height: 85px;
+    background-color: #fff;
+     
+    &__body {
+        padding: 20px 0 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__contacts {
+        display: flex;
+    }
+    &__flag {
+        margin-right: 10px;
+    }
+    &__text {
+        color: $text_color;
+        line-height: 18px;
+    }
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__subtitle {
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
